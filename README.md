@@ -33,6 +33,11 @@ Successfully tagged oracle/database:18.4.0-xe
 $ docker images
 REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
 oracle/database      18.4.0-xe           2018ad58d2f3        16 hours ago        3.9GB
+
+Note: Oracle official db binary may change time to time and due to that checksum might fail. 
+You can put updated checksum in Checksum.xe (for express edition) or simply to ignore md5sum check please use -i option.
+#For Example:
+$ ./buildDockerImage.sh -v 18.4.0 -x -i
 ```
 
 ## Run the Container
